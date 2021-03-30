@@ -1,4 +1,8 @@
 /* * Navbar */
+nav .logo {
+  font-size: 1.7rem;
+}
+
 nav ul {
   position: absolute;
   flex-direction: column;
@@ -7,7 +11,7 @@ nav ul {
   right: 0;
   top: 0;
   height: 100vh;
-  width: 65%;
+  width: 100%;
   font-size: 1rem;
   background-color: #74ebd5;
   background-image: linear-gradient(90deg, #74ebd5 0%, #9face6 100%);
@@ -52,6 +56,7 @@ header {
 
 header img {
   max-width: 25%;
+  min-height: 25% !important;
 }
 
 header span {
@@ -85,10 +90,9 @@ header small {
 }
 
 .about .my-row .my-col {
-  max-width: 85%;
-  width: calc(85% + 200px);
+  min-width: 95%;
   text-align: left;
-  margin-left: 1.1rem;
+  margin-left: 5px;
 }
 
 /* * Portofolio */
