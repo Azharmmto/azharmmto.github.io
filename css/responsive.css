@@ -1,0 +1,144 @@
+/* * Navbar */
+nav ul {
+  position: absolute;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 65%;
+  font-size: 1rem;
+  background-color: #74ebd5;
+  background-image: linear-gradient(90deg, #74ebd5 0%, #9face6 100%);
+  transform: translateX(100%);
+  transition: 0.5s all;
+}
+
+nav ul.slide {
+  transform: translateX(0);
+}
+
+nav ul img {
+  display: block;
+  max-width: 35px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 15px;
+  cursor: pointer;
+}
+
+nav ul img:focus {
+  background-color: skyblue;
+}
+
+nav ul li a {
+  color: #000;
+  font-weight: 800;
+}
+
+nav .menu-hamburger {
+  display: flex;
+}
+
+/* * Header */
+header {
+  background-position: 0 50%;
+  background-size: cover;
+  width: 100%;
+  min-height: 200px;
+}
+
+header img {
+  max-width: 25%;
+}
+
+header span {
+  font-size: 1.3rem;
+}
+
+header small {
+  font-size: 0.7rem;
+}
+
+/* * Project */
+.project {
+  margin-top: 0;
+}
+
+.project .my-row {
+  align-items: center;
+  margin: auto;
+}
+
+.project .my-row .card {
+  margin: 10px auto;
+  max-width: 75%;
+}
+
+/* * About */
+.about .my-row {
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+}
+
+.about .my-row .my-col {
+  max-width: 85%;
+  width: calc(85% + 200px);
+  text-align: left;
+  margin-left: 1.1rem;
+}
+
+/* * Portofolio */
+.gambar .container-image {
+  flex-direction: column;
+  align-items: center;
+}
+
+.gambar .container-image .card-image {
+  margin: 10px auto;
+}
+
+.gambar .container-image .card-image:nth-child(1) {
+  margin-top: 1rem;
+}
+
+/* * Contact */
+.contact form {
+  position: static;
+  max-width: 70%;
+  align-items: center;
+}
+
+.contact form label {
+  font-weight: 600;
+  margin-right: auto !important;
+}
+
+.contact form input,
+textarea {
+  min-width: 300px;
+}
+
+.contact form button {
+  margin-right: auto;
+}
+
+/* * Footer */
+footer h3 {
+  font-size: 1rem;
+  text-align: center;
+}
+
+footer .icons {
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-top: 10px;
+}
+
+footer .icons a img {
+  height: 23px;
+  width: 23px;
+}

@@ -1,0 +1,674 @@
+/* * Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+:root {
+  --warna-tema: #0442ec;
+  --warna-text-nav: #ffffff;
+  --warna-bg: #f5f1f1;
+  --ukuran-font-judul: calc(1vw + 1.3rem);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  transition: 0.7s;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -ms-transition: 0.7s;
+  -o-transition: 0.7s;
+  overflow-y: scroll;
+  /* scroll-behavior: smooth; */
+  overflow-x: hidden;
+}
+
+/* * Navbar */
+nav {
+  /* background-color: var(--warna-tema); */
+  background-color: #0598ec;
+  /* background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%); */
+  height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  top: 0;
+}
+nav .logo {
+  color: var(--warna-text-nav);
+  font-family: "Calligraffitti", cursive;
+  letter-spacing: 2px;
+  font-size: calc(0.6vw + 1rem);
+}
+
+nav .logo::before {
+  content: "";
+  display: block;
+  background: url(../../image/TauhidMenyucikanKalbu.jpg) no-repeat;
+  background-size: 25px;
+  width: 25px;
+  height: 25px;
+  float: left;
+  margin: 8px 10px 0 0;
+  border-radius: 50%;
+}
+
+nav ul {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+nav ul img {
+  display: none;
+}
+
+nav ul li a {
+  color: var(--warna-text-nav);
+  text-decoration: none;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--warna-tema);
+  background-color: #ffff;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/* nav ul.slide {
+  transform: translateX(0);
+} */
+
+/* * Navbar mobile */
+.menu-hamburger {
+  height: 37px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+.menu-hamburger span {
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+  display: block;
+}
+
+/* * Header */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #3eecac;
+  background-image: linear-gradient(19deg, #3eecac 0%, #ee74e1 100%);
+  min-height: 350px;
+  margin-top: 55px;
+  padding-top: 1rem;
+}
+
+header img {
+  max-width: 15%;
+  height: 15%;
+  border-radius: 50%;
+  box-shadow: 0 0px 12.2px rgba(0, 0, 0, 0.069), 0 0px 33.7px rgba(0, 0, 0, 0.13), 0 0px 81.1px rgba(0, 0, 0, 0.205), 0 0px 269px rgba(0, 0, 0, 0.3);
+}
+
+header span {
+  color: #ffff;
+  font-size: var(--ukuran-font-judul);
+  text-align: center;
+  font-style: italic;
+}
+
+header small a {
+  text-decoration: none;
+  color: #011b2b;
+}
+
+header small a:hover {
+  text-decoration: underline;
+}
+
+/* * Project */
+.project {
+  padding-top: 25px;
+  margin-top: 2.5em;
+  -moz-box-flex: flex;
+  -ms-flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.project h2 {
+  text-align: center;
+  margin: 1.5rem 0;
+  font-size: var(--ukuran-font-judul);
+}
+
+.project .my-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project .my-row .card {
+  max-width: 350px;
+  min-height: 150px;
+  margin-right: 2em;
+  text-align: center;
+  padding: 10px 10px 15px 10px;
+  background-color: #8ec5fc;
+  background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+  border-radius: 10px;
+  transition: 0.3s all;
+}
+
+.project .my-row .card:hover {
+  box-shadow: 0 0px 3.6px rgba(0, 0, 0, 0.08), 0 0px 10px rgba(0, 0, 0, 0.09), 0 0px 24.1px rgba(0, 0, 0, 0.088), 0 0px 80px rgba(0, 0, 0, 0.08);
+}
+
+.project .my-row .card p {
+  font-weight: 100;
+}
+
+.project .my-row .card h3 {
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+/* * About */
+.about {
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: var(--ukuran-font-judul);
+}
+
+.about .my-row {
+  -moz-box-flex: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.about .my-row .my-col {
+  width: 30% !important;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: rgb(255, 255, 255);
+}
+
+.about .my-row .my-col:nth-child(1) {
+  margin-right: 3em;
+}
+
+/* * Portofolio */
+.gambar {
+  display: -webkit-flex;
+  -moz-box-flex: flex;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.gambar h2 {
+  font-size: var(--ukuran-font-judul);
+}
+
+.gambar .container-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  justify-content: center;
+  -ms-flex-pack: center;
+}
+
+.gambar .container-image .card-image img {
+  max-width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.gambar .container-image .card-image {
+  margin-top: 2rem;
+  max-width: 300px;
+  margin-right: 3rem;
+  padding-bottom: 7px;
+  background-color: #8ec5fc;
+  background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+  border-radius: 10px;
+  padding-bottom: 1.3rem;
+  -moz-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  position: relative;
+  color: #000;
+}
+
+.gambar .container-image .card-image .layer {
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+}
+
+.gambar .container-image .card-image .layer:hover {
+  background-color: #70c9ec;
+  /* background-image: linear-gradient(90deg, #74ebd5 0%, #9face6 100%); */
+  opacity: 0.8;
+}
+
+.gambar .container-image .card-image .layer h3 {
+  width: 100%;
+  font-size: 18px;
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  -moz-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.gambar .container-image .card-image .layer:hover h3 {
+  bottom: 49%;
+  opacity: 1;
+  color: black;
+}
+
+.gambar .container-image .card-image h4,
+p {
+  padding: 5px 13px;
+}
+
+/* * Contact */
+.contact {
+  padding-top: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly !important;
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.contact .alert {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  background-color: #e72b1d;
+  padding: 1.9rem 1rem 1rem 1rem;
+  border-radius: 5px;
+  opacity: 0.9;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.8);
+  letter-spacing: 1px;
+  z-index: 100;
+  border-radius: 5px;
+  transition: 0.3s;
+  transform: scale(0);
+}
+
+.contact .alert.aktif {
+  transform: scale(1);
+}
+
+.contact .alert img {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.contact .alert img:hover {
+  background-color: #ff0000;
+}
+
+.contact .alert strong a {
+  text-decoration: none;
+  color: #0442ec;
+}
+
+.contact .alert strong a:hover {
+  background-color: #fff;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: var(--ukuran-font-judul);
+}
+
+.contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+  position: absolute;
+  transition: 0.3s all;
+}
+
+.contact form label {
+  margin: 15px 0 5px 0;
+  text-align: left;
+}
+
+.contact form input,
+textarea {
+  padding: 0.7em 0.7em;
+  min-width: 450px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: 1px solid #000;
+}
+
+.contact form input,
+textarea:focus {
+  outline: none;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.contact form textarea {
+  min-height: 150px;
+}
+
+.contact button {
+  padding: 1em 1em;
+  max-width: 120px;
+  margin-top: 1rem;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border: none;
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  cursor: pointer;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  /* position: absolute;
+  bottom: 20px;
+  left: 35%; */
+}
+
+.contact button:hover {
+  background-color: #8bc6ec;
+  background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+}
+
+/* * Footer*/
+footer {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: #d9afd9;
+  background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+}
+
+footer h3 {
+  /*font-size: calc(0.7vw + 0.9rem); */
+  font-size: 1rem;
+}
+
+footer .icons {
+  margin-right: auto;
+}
+
+footer .icons a {
+  text-decoration: none;
+  margin-right: 5px;
+  transition: 0.3s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+footer .icons a img {
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+footer .icons a:hover img {
+  transform: translateY(-7px);
+  -webkit-transform: translateY(-7px);
+  -moz-transform: translateY(-7px);
+  -ms-transform: translateY(-7px);
+  -o-transform: translateY(-7px);
+}
+
+/* todo ===== Responsive CSS ===== */
+
+/* * Versi Desktop */
+@media (min-width: 1200px) {
+  /* * Navbar */
+  nav ul {
+    width: 40% !important;
+  }
+  nav ul li a {
+    font-size: 2rem;
+  }
+  /* * Project */
+  .project .my-row {
+    min-width: 100%;
+  }
+
+  .project .my-row .card {
+    max-width: 350px;
+    min-height: 150px;
+    margin-right: 1em;
+    text-align: center;
+  }
+
+  .project .my-row .card:nth-child(3) {
+    margin-top: 0 !important;
+  }
+
+  /* * About */
+  .about .my-row {
+    flex-direction: row !important;
+    max-width: 85%;
+    margin: 10px auto;
+  }
+
+  .about .my-row .my-col {
+    text-align: center !important;
+  }
+
+  /* * contact */
+  .contact {
+    margin-top: 5rem;
+  }
+  .contact form {
+    position: absolute !important;
+  }
+
+  .contact .alert {
+    width: 50% !important;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  .project .my-row {
+    min-width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .project .my-row .card {
+    margin-right: 1rem;
+  }
+
+  .project .my-row .card:nth-child(3) {
+    margin-top: 0 !important;
+  }
+}
+
+/* * Versi Tablets */
+@media (min-width: 768px) {
+  /* * Navbar */
+  nav ul {
+    width: 60%;
+  }
+
+  nav .logo {
+    font-size: 1.3rem;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+  }
+
+  /* * Project */
+  .project .my-row {
+    flex-wrap: wrap;
+    margin: auto;
+  }
+
+  .project .my-row .card {
+    max-width: 300px;
+    margin: auto;
+  }
+  .project .my-row .card:nth-child(3) {
+    margin-top: 1.3rem;
+  }
+
+  /* * About */
+  .about .my-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about .my-row .my-col {
+    width: 90%;
+    text-align: left;
+    margin-left: 1.3rem;
+  }
+
+  .about .my-row .my-col:nth-child(1) {
+    margin-bottom: 10px;
+  }
+
+  /* * Contact */
+  .contact form {
+    position: absolute;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact {
+    margin-top: 7rem;
+  }
+}
+
+/* * Versi HP Kecil */
+@media (max-width: 325px) {
+  nav ul {
+    width: 100% !important;
+  }
+
+  header {
+    background-position: 0 -13px !important;
+    max-height: 0;
+  }
+
+  /* *About */
+  .about .my-row .my-col {
+    margin-left: 7px !important;
+    width: 100% !important;
+  }
+
+  /* *Prottofolio */
+  .gambar .container-image .card-image {
+    width: 230px !important;
+  }
+
+  /* * Contact */
+  .contact form input,
+  textarea {
+    min-width: 230px !important;
+  }
+
+  /* * footer */
+  footer {
+    border-radius: 0;
+    align-items: flex-end;
+  }
+
+  footer .icons {
+    margin-left: auto;
+  }
+}
+@media (max-width: 900px) {
+  .contact .alert {
+    width: 80%;
+  }
+}
