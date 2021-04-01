@@ -3,6 +3,11 @@ nav .logo {
   font-size: 1.7rem;
 }
 
+nav .logo::before {
+  content: "";
+  display: none;
+}
+
 nav ul {
   position: absolute;
   flex-direction: column;
@@ -11,7 +16,7 @@ nav ul {
   right: 0;
   top: 0;
   height: 100vh;
-  width: 100%;
+  width: 80%;
   font-size: 1rem;
   background-color: #74ebd5;
   background-image: linear-gradient(90deg, #74ebd5 0%, #9face6 100%);

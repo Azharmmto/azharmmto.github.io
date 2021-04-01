@@ -635,6 +635,11 @@ footer .icons a:hover img {
     width: 100% !important;
   }
 
+  nav .logo::before {
+    content: "";
+    display: none;
+  }
+
   header {
     background-position: 0 -13px !important;
     max-height: 0;
