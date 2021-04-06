@@ -51,6 +51,10 @@ nav .menu-hamburger {
   display: flex;
 }
 
+nav .menu-hamburger:focus {
+  background-color: #6c79e9;
+}
+
 /* * Header */
 header {
   background-position: 0 50%;
@@ -61,7 +65,7 @@ header {
 
 header img {
   max-width: 25%;
-  min-height: 25% !important;
+  min-height: 10% !important;
 }
 
 header span {
@@ -100,7 +104,7 @@ header small {
   margin-left: 5px;
 }
 
-/* * Portofolio */
+/* * Gambar & Poster */
 .gambar .container-image {
   flex-direction: column;
   align-items: center;
@@ -112,6 +116,11 @@ header small {
 
 .gambar .container-image .card-image:nth-child(1) {
   margin-top: 1rem;
+}
+
+/* Gambar Faidah */
+.gambar .container-image:nth-child(3) .card-image {
+  max-width: 315px;
 }
 
 /* * Contact */

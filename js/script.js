@@ -1,7 +1,7 @@
-// todo navbar
-const navMobile = document.querySelector("nav ul");
-const menuHamburger = document.querySelector("nav .menu-hamburger");
-const closeMobileNav = document.querySelector("nav ul img");
+// todo : navbar
+const navMobile = document.querySelector("nav ul"),
+  menuHamburger = document.querySelector("nav .menu-hamburger"),
+  closeMobileNav = document.querySelector("nav ul img");
 
 menuHamburger.addEventListener("click", function () {
   navMobile.classList.add("slide");
@@ -11,11 +11,11 @@ closeMobileNav.addEventListener("click", function () {
   navMobile.classList.remove("slide");
 });
 
-// todo Contact
-const formContact = document.querySelector(".contact form");
-const textarea = document.querySelector(".contact form textarea");
-const myAlert = document.querySelector(".contact .alert");
-const closeAlert = document.querySelector(".contact .alert img");
+// todo : Contact
+const formContact = document.querySelector(".contact form"),
+  textarea = document.querySelector(".contact form textarea"),
+  myAlert = document.querySelector(".contact .alert"),
+  closeAlert = document.querySelector(".contact .alert img");
 
 textarea.addEventListener("click", function () {
   myAlert.classList.add("aktif");
@@ -25,4 +25,24 @@ textarea.addEventListener("click", function () {
 closeAlert.addEventListener("click", function () {
   myAlert.classList.remove("aktif");
   formContact.style.top = "0";
+});
+
+// todo : navbar gambar & poster
+const gambar = document.querySelector(".gambar .container-image:nth-child(2)"),
+  gambarFaidah = document.querySelector(".gambar .container-image:nth-child(3)"),
+  gambarSatu = document.querySelector(".gambar .nav-gambar ul li:nth-child(1)"),
+  gambardua = document.querySelector(".gambar .nav-gambar ul li:nth-child(2)");
+
+gambardua.addEventListener("click", function () {
+  gambar.classList.add("non-active");
+  gambarFaidah.classList.add("aktif");
+  gambardua.style.color = "#000";
+  gambarSatu.style.color = "rgb(170, 169, 169";
+});
+
+gambarSatu.addEventListener("click", function () {
+  gambar.classList.remove("non-active");
+  gambarFaidah.classList.remove("aktif");
+  gambarSatu.style.color = "#000";
+  gambardua.style.color = "rgb(170, 169, 169";
 });

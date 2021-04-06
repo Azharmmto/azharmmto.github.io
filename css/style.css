@@ -1,4 +1,4 @@
-/* * Fonts */
+/* * Fonts  Google */
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap");
 
@@ -10,6 +10,7 @@
 }
 
 :root {
+  --font-default: "Quicksand", sans-serif;
   --warna-tema: #0442ec;
   --warna-text-nav: #ffffff;
   --warna-bg: #f5f1f1;
@@ -21,7 +22,7 @@ html {
 }
 
 body {
-  font-family: "Quicksand", sans-serif;
+  font-family: var(--font-default);
   transition: 0.7s;
   -webkit-transition: 0.7s;
   -moz-transition: 0.7s;
@@ -102,16 +103,7 @@ nav ul li a:hover {
 .menu-hamburger {
   height: 37px;
   display: none;
-  flex-direction: column;
-  justify-content: space-evenly;
   cursor: pointer;
-}
-
-.menu-hamburger span {
-  width: 25px;
-  height: 2px;
-  background-color: #fff;
-  display: block;
 }
 
 /* * Header */
@@ -259,27 +251,34 @@ header small a:hover {
   -ms-flex-pack: center;
 }
 
-.gambar .container-image .card-image img {
-  max-width: 100%;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
+.gambar .container-image:nth-child(2).non-active {
+  display: none;
 }
 
 .gambar .container-image .card-image {
   margin-top: 2rem;
   max-width: 300px;
   margin-right: 3rem;
-  padding-bottom: 7px;
   background-color: #8ec5fc;
   background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
   border-radius: 10px;
-  padding-bottom: 1.3rem;
+  padding-bottom: 0.3rem;
   -moz-transition: 0.3s;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
   position: relative;
   color: #000;
+}
+
+.gambar .container-image .card-image img {
+  max-width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.gambar .container-image .card-image span {
+  padding: 10px;
 }
 
 .gambar .container-image .card-image .layer {
@@ -319,9 +318,164 @@ header small a:hover {
   color: black;
 }
 
-.gambar .container-image .card-image h4,
+.gambar .container-image .card-image h2 {
+  font-size: calc(0.7rem + 0.5rem);
+}
+
+.gambar .container-image .card-image h2,
 p {
   padding: 5px 13px;
+}
+
+/* * ==== Gambar Faidah ==== */
+.gambar .container-image:nth-child(3) {
+  display: none;
+}
+
+.gambar .container-image:nth-child(3).aktif {
+  display: flex;
+}
+
+.gambar .container-image:nth-child(3) .card-image {
+  max-width: 350px;
+}
+
+.gambar .container-image:nth-child(3) .card-image:nth-child(3) img[alt^="Ikatlah Kemarahanmu"] {
+  border-top: 1px solid #eee;
+  border-right: 1px solid #eee;
+  border-left: 1px solid #eee;
+}
+
+.gambar .container-image:nth-child(3) .card-image p:nth-last-child(2) {
+  font-size: 14px;
+}
+
+.gambar .container-image:nth-child(3) .card-image .layer:hover h3 {
+  bottom: 53%;
+}
+
+.gambar .container-image:nth-child(3) .card-image .layer h3 a {
+  color: #014872;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  font-size: 1.3rem;
+}
+
+.gambar .container-image:nth-child(3) .card-image .layer h3 a:hover {
+  color: #000;
+}
+
+.gambar .container-image:nth-child(3) .card-image .layer h3 a:visited {
+  color: #000;
+}
+
+.gambar .container-image:nth-child(3) .card-image .layer h3::before {
+  content: "";
+  display: block;
+  background: url(../icons/telegram_icons.png) no-repeat;
+  background-size: 25px;
+  width: 27px;
+  height: 27px;
+  float: left;
+  left: 50px;
+  position: absolute;
+}
+
+.gambar .container-image:nth-child(3) .card-image .layer h3::after {
+  content: "Follow us :";
+  float: left;
+  position: absolute;
+  display: block;
+  left: 83px;
+  bottom: 23px;
+}
+
+.gambar .container-image:nth-child(3) .card-image .layer img {
+  max-width: 25px;
+  min-height: 25px;
+}
+
+.gambar .container-image:nth-child(3) .card-image .layer img {
+  width: 10%;
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  -moz-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  right: 30px;
+  transition: 0.3s all;
+}
+
+.gambar .container-image:nth-child(3) .card-image .layer img:hover {
+  transform: translateY(-5px);
+}
+
+.gambar .container-image:nth-child(3) .card-image .layer:hover img {
+  opacity: 1;
+  bottom: 7%;
+}
+
+.gambar .container-image:nth-child(3) .card-image .layer > a:nth-child(3) {
+  width: 80%;
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  -moz-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  left: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+
+.gambar .container-image:nth-child(3) .card-image .layer > a:nth-child(3):hover {
+  text-decoration: underline;
+}
+
+.gambar .container-image:nth-child(3) .card-image .layer:hover > a:nth-child(3) {
+  bottom: 1%;
+  opacity: 1;
+}
+
+/* Navbar Gambar */
+.nav-gambar {
+  min-width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.nav-gambar ul {
+  list-style: none;
+  display: flex;
+  text-align: center;
+}
+
+.nav-gambar ul li {
+  margin-right: 1.2rem;
+  color: rgb(170, 169, 169);
+  cursor: pointer;
+}
+
+.nav-gambar ul li:hover {
+  color: #000;
+}
+
+.nav-gambar ul li:nth-child(1) {
+  color: #000;
+}
+
+.nav-gambar ul li:nth-child(1):hover {
+  color: #000 !important;
+}
+
+.nav-gambar ul li:nth-child(2):hover {
+  color: #000 !important;
 }
 
 /* * Contact */
@@ -641,7 +795,7 @@ footer .icons a:hover img {
   }
 
   header {
-    background-position: 0 -13px !important;
+    background-position: 0 0 !important;
     max-height: 0;
   }
 
@@ -651,9 +805,13 @@ footer .icons a:hover img {
     width: 100% !important;
   }
 
-  /* *Prottofolio */
+  /* *Gabar & Poster */
   .gambar .container-image .card-image {
     width: 230px !important;
+  }
+
+  .gambar .container-image:nth-child(3) .card-image {
+    max-width: 270px;
   }
 
   /* * Contact */
