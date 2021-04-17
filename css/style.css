@@ -28,9 +28,6 @@ body {
   -moz-transition: 0.7s;
   -ms-transition: 0.7s;
   -o-transition: 0.7s;
-  overflow-y: scroll;
-  /* scroll-behavior: smooth; */
-  overflow-x: hidden;
 }
 
 /* * Navbar */
@@ -54,18 +51,6 @@ nav .logo {
   font-family: "Calligraffitti", cursive;
   letter-spacing: 2px;
   font-size: calc(0.6vw + 1rem);
-}
-
-nav .logo::before {
-  content: "";
-  display: block;
-  background: url(../../image/TauhidMenyucikanKalbu.jpg) no-repeat;
-  background-size: 25px;
-  width: 25px;
-  height: 25px;
-  float: left;
-  margin: 8px 10px 0 0;
-  border-radius: 50%;
 }
 
 nav ul {
@@ -94,10 +79,6 @@ nav ul li a:hover {
   border-radius: 10px;
   font-weight: bold;
 }
-
-/* nav ul.slide {
-  transform: translateX(0);
-} */
 
 /* * Navbar mobile */
 .menu-hamburger {
@@ -152,6 +133,8 @@ header small a:hover {
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
+  max-width: 80%;
+  margin: auto;
 }
 .project h2 {
   text-align: center;
@@ -210,6 +193,7 @@ header small a:hover {
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
+  max-width: 80%;
 }
 
 .about .my-row .my-col {
