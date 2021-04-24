@@ -16,7 +16,7 @@ nav ul {
   right: 0;
   top: 0;
   height: 100vh;
-  width: 80%;
+  width: 75%;
   font-size: 1rem;
   background-color: #74ebd5;
   background-image: linear-gradient(90deg, #74ebd5 0%, #9face6 100%);
@@ -53,6 +53,30 @@ nav .menu-hamburger {
 
 nav .menu-hamburger:focus {
   background-color: #6c79e9;
+}
+
+nav .menu-closeNav {
+  display: block;
+  transform: translateX(-100%);
+  position: absolute;
+  left: 0;
+  height: 100vh;
+  bottom: 0;
+  top: 0;
+  min-width: 25%;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: 0.5s all;
+  cursor: pointer;
+}
+
+nav .menu-closeNav.mobile {
+  transform: translateX(0);
+}
+
+nav .menu-closeNav .close {
+  flex-direction: column;
+  margin: 20px 45px 0 40%;
+  min-width: 10px !important;
 }
 
 /* * Header */

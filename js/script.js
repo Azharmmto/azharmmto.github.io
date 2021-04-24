@@ -1,14 +1,17 @@
 // todo : navbar
 const navMobile = document.querySelector("nav ul"),
   menuHamburger = document.querySelector("nav .menu-hamburger"),
-  closeMobileNav = document.querySelector("nav ul img");
+  closeMobileNav = document.querySelector("nav .menu-closeNav");
+// closeMobileNavImg = document.querySelector("nav .menu-closeNav .close");
 
 menuHamburger.addEventListener("click", function () {
   navMobile.classList.add("slide");
+  closeMobileNav.classList.add("mobile");
 });
 
 closeMobileNav.addEventListener("click", function () {
   navMobile.classList.remove("slide");
+  closeMobileNav.classList.remove("mobile");
 });
 
 // todo : Contact

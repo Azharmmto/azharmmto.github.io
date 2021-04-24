@@ -15,6 +15,7 @@
   --warna-text-nav: #ffffff;
   --warna-bg: #f5f1f1;
   --ukuran-font-judul: calc(1vw + 1.3rem);
+  --color-close-nav: #ec0404;
 }
 
 html {
@@ -33,8 +34,8 @@ body {
 /* * Navbar */
 nav {
   /* background-color: var(--warna-tema); */
-  background-color: #0598ec;
   /* background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%); */
+  background-color: #0598ec;
   height: 55px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -81,9 +82,24 @@ nav ul li a:hover {
 }
 
 /* * Navbar mobile */
-.menu-hamburger {
+nav .menu-hamburger {
   height: 37px;
   display: none;
+  cursor: pointer;
+}
+
+/* * Menu Close Nav Mobile */
+nav .menu-closeNav {
+  display: none;
+}
+
+nav .menu-closeNav .close {
+  display: flex;
+  transition: 0.3s all;
+}
+
+nav .menu-closeNav .close:hover {
+  background-color: var(--color-close-nav);
   cursor: pointer;
 }
 
