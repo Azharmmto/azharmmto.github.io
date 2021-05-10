@@ -7,103 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Belajar Membuat Portofolio Website " />
     <meta name="keywords" content="Belajar Membuat Website Portofolio" />
-    <!--  CSS  -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" media="(max-width: 600px)" href="css/responsive.css" />
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png" />
-    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png" />
-    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
-    <link rel="manifest" href="favicon/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-    <meta name="theme-color" content="#ffffff" />
+    <!--  css / scss  -->
+
+
+    <!-- favicons -->
     <title>Portofolio Web</title>
   </head>
   <body>
+
+  <!-- container -->
+  <div class="container">
     <!--  Navbar -->
     <nav>
       <h1 class="logo"><strong>Welcome</strong></h1>
 
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#project">Project</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#">Article</a></li>
+        <li><a href="#artikel">Artikel</a></li>
+        <li><a href="#about">About</a></li>
       </ul>
 
-      <!--  Menu Hamburger -->
-      <div class="menu-hamburger">
-          <img src="icons/menuHamburger.svg" alt="Menu Hamburger" />
-      </div>
-
-      <div class="menu-closeNav">
-        <div class="close">
-          <img src="icons/close.svg" alt="icons close" />
-        </div>
-      </div>
+      <div class="menu-hamburger"></div>
     </nav>
 
-    <!--  Header -->
     <header>
-      <img src="img/icons-coding.png" alt="Tauhid Menyucikan Kalbu" title="@unplash" />
+      <img src="img/faidah/TauhidMenyucikanKalbu.jpg" alt="Tauhid Menyucikan Kalbu" title="@unplash" />
       <span>Azhar Mamonto</span>
       <small>Students in <em><a href="http://smkn2kotamobagu.sch.id/">SMK N 2 Kotamobagu</a></em></small>
-
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,160L48,149.3C96,139,192,117,288,112C384,107,480,117,576,144C672,171,768,213,864,213.3C960,213,1056,171,1152,149.3C1248,128,1344,128,1392,128L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
     </header>
+    
+    <!-- artikel -->
 
-    <!--  Project -->
-    <section id="project" class="project">
-      <h2>Project</h2>
-      <div class="my-row">
-        <div class="card">
-          <h3>web designer</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt quam dicta nihil a, qui optio id consequuntur laboriosam minima impedit! Repudiandae facilis quasi quas vero et, eveniet veritatis
-            similique quisquam!
-          </p>
-        </div>
-        <div class="card">
-          <h3>UI/UX designer</h3>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, facere! Natus amet quasi illum deleniti alias omnis nisi similique ipsum non molestiae. Amet placeat a ab animi unde sunt
-            maxime?
-          </p>
-        </div>
-        <div class="card">
-          <h3>website project</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque quasi labore eveniet laudantium earum, ipsum saepe similique sint hic ipsam, aperiam repellat, cumque quos recusandae laborum.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!--  About -->
+    <!--  about -->
     <section id="about" class="about">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#fff"
-          fill-opacity="1"
-          d="M0,96L80,133.3C160,171,320,245,480,250.7C640,256,800,192,960,154.7C1120,117,1280,107,1360,101.3L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
-        ></path>
-      </svg>
-
       <h2>About Me</h2>
       <div class="my-row">
-        <div class="my-col">
+        <div class="my-col"> 
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, quos suscipit quasi reprehenderit qui et voluptatum magni sit voluptatem pariatur sapiente. Velit neque soluta rerum nihil eligendi expedita. Beatae accusamus sint odio voluptatibus dolore ad hic! Rem, explicabo incidunt? Fuga, tenetur.
           </p>
@@ -114,96 +53,11 @@
           </p>
         </div>
       </div>
-
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path 
-          fill="#fff" 
-          fill-opacity="1" 
-          d="M0,128L48,112C96,96,192,64,288,80C384,96,480,160,576,186.7C672,213,768,203,864,181.3C960,160,1056,128,1152,122.7C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-        </path>
-      </svg>
     </section>
 
-    <!--  Portofolio -->
-    <section class="gambar" id="gambar">
+    <!--  Gambar Faidah -->
+    <section id="gambar">
       <h2>Gambar & Poster</h2>
-      <div class="container-image">
-        <div class="card-image">
-          <img src="img/img1-ringan.jpg" alt="Gambar 1" />
-          <h2>Coding</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quas dolore officia aut dolorum eveniet temporibus! Sapiente minima placeat ipsa alias unde? Ab aperiam ipsum dolore error soluta
-            molestiae architecto!
-          </p>
-
-          <div class="layer">
-            <h3>Gambar 1</h3>
-          </div>
-
-          <span><em>@unsplash</em></span>
-        </div>
-
-        <div class="card-image">
-          <img src="img/img2-ringan.jpg" alt="Gambar 2" />
-          <h2>Coding</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolorem assumenda debitis saepe temporibus, mollitia id odit, ea facere nisi similique quibusdam impedit amet laudantium sit
-            voluptatum quae nostrum veritatis!
-          </p>
-
-          <div class="layer">
-            <h3>Gambar 2</h3>
-          </div>
-
-          <span><em>@unsplash</em></span>
-        </div>
-
-        <div class="card-image">
-          <img src="img/img3.jpg" alt="Gambar 3" />
-          <h2>Coding</h2>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate suscipit unde iste mollitia quisquam animi tenetur, perspiciatis iure voluptatibus, ipsam enim veritatis at dolore. Unde tempora
-            eveniet quia placeat illum!
-          </p>
-
-          <div class="layer">
-            <h3>Gambar 3</h3>
-          </div>
-
-          <span><em>@unsplash</em></span>
-        </div>
-
-        <div class="card-image">
-          <img src="img/img4-ringan.jpg" alt="Gambar 4" />
-          <h2>Coding</h2>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate suscipit unde iste mollitia quisquam animi tenetur, perspiciatis iure voluptatibus, ipsam enim veritatis at dolore. Unde tempora
-            eveniet quia placeat illum!
-          </p>
-
-          <div class="layer">
-            <h3>Gambar 4</h3>
-          </div>
-
-          <span><em>@unsplash</em></span>
-        </div>
-
-        <div class="card-image">
-          <img src="img/img5.jpg" alt="Gambar 5" />
-          <h2>Coding</h2>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate suscipit unde iste mollitia quisquam animi tenetur, perspiciatis iure voluptatibus, ipsam enim veritatis at dolore. Unde tempora
-            eveniet quia placeat illum!
-          </p>
-
-          <div class="layer">
-            <h3>Gambar 5</h3>
-          </div>
-
-          <span><em>@unsplash</em></span>
-        </div>
-      </div>
-      <!-- Gambar Faidah -->
       <div class="container-image">
         <div class="card-image">
           <img src="img/faidah/bahaya_megerjakan_shalat_asal-aslan.jpg" alt="Bahaya Megerjakan Shalat Asal-asalan" />
@@ -285,7 +139,6 @@
         </div>
       </div>
 
-
       <div class="nav-gambar">
         <ul>
           <li>1</li>
@@ -295,42 +148,10 @@
       </div>
     </section>
 
-    <!--  Contact -->
-    <section class="contact" id="contact">
-      <svg 
-        xmlns="http://www.w3.org/2000/svg" 
-        viewBox="0 0 1440 320">
-        <path fill="#fff" 
-        fill-opacity="1" d="M0,128L48,138.7C96,149,192,171,288,149.3C384,128,480,64,576,42.7C672,21,768,43,864,74.7C960,107,1056,149,1152,144C1248,139,1344,85,1392,58.7L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
-        </path>
-      </svg>
-
-        <div class="alert">
-          <img src="../icons/close.svg" alt="Close ICONS">
-          <strong>Maaf Form Contact ini belum berjalan, dan pesan yang anda ketikkan mungkin tidak akan terkirim. Kalau ada saran/pesan bisa langsung menghubungi saya melalui Telegram, <a href="https://t.me/Azhar_mmto">disini</a></strong>
-        </div>
-        <form action="" name="contact">
-          <h2>Contact</h2>
-          <label for="username">Nama</label>
-          <input type="text" name="username" id="username" minlength="3" maxlength="10" required />
-          <label for="notelp">Nomor HP</label>
-          <input type="number" name="notelp" id="notelp" minlength="12" maxlength="13" required />
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email" />
-          <label for="pesan">Pesan</label>
-          <textarea name="pesan" id="pesan" minlength="5" maxlength="200" required></textarea>
-
-          <button type="submit">Send</button>
-        </form>
-      </div>
-
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,288L48,293.3C96,299,192,309,288,282.7C384,256,480,192,576,181.3C672,171,768,213,864,229.3C960,245,1056,235,1152,202.7C1248,171,1344,117,1392,90.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-    </section>
-
-    <footer id="footer">
-      <h3>  &copy; 1442 / 2021 | <em>Created by</em> <strong>Azhar Mamonto</strong></h3>
+    <footer>
+      <h3>  &copy; 1442 / 2021 </h3>
       <div class="icons">
-        <a href="https://t.me/Azhar_mmto" title="Telegram Chat">
+        <a href="https://t.me/azharMmto" title="Telegram Chat">
           <img src="icons/massenger.svg" alt="Telegram" />
         </a>
 
@@ -339,7 +160,9 @@
         </a>
       </div>
     </footer>
+  </div>
 
+    <!-- MY JS -->
     <script src="js/script.js"></script>
   </body>
 </html>
