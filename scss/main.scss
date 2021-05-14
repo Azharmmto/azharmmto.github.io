@@ -1,0 +1,12 @@
+// import css reset
+@import "_reset-normalize";
+
+// font
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap");
+
+// variabel
+$main-font: "Inter", sans-serif;
+
+body {
+  font-family: $main-font;
+}
