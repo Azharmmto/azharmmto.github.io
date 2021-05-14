@@ -3,18 +3,203 @@
 
 // font google
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
 // variabel
 $main-font: "Inter", sans-serif;
+$font-logo: "Great Vibes", cursive;
 $main-color: #6abe3f;
+$cek-border: 1px dashed red;
+$color-nav: #ffffff;
+$transition-nav: 0.3s all;
 
 // Responsive layout width
-$mini-mobile: 280px;
+$mini-mobile: 285px;
 $mobile: 576px;
 $tablet: 768px;
 $laptop: 992px;
 $desktop: 1200px;
 
+// style
 body {
   font-family: $main-font;
+}
+
+// navbar
+nav {
+  height: 55px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $main-color;
+  box-shadow: 0 0.7px 2.2px rgba(0, 0, 0, 0.041), 0 1.8px 5.3px rgba(0, 0, 0, 0.08), 0 3.4px 10px rgba(0, 0, 0, 0.074), 0 6px 17.9px rgba(0, 0, 0, 0.07), 0 11.3px 33.4px rgba(0, 0, 0, 0.069),
+    0 27px 80px rgba(0, 0, 0, 0.07);
+  position: fixed;
+  top: 0;
+
+  h1 {
+    font-size: 2.3rem;
+    font-family: $font-logo;
+    letter-spacing: 2px;
+    a {
+      color: $color-nav;
+    }
+  }
+
+  ul {
+    list-style: none;
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    transition: $transition-nav;
+
+    li {
+      position: relative;
+
+      &:nth-child(1) {
+        a {
+          color: $color-nav !important;
+        }
+      }
+      a {
+        color: #dfdede;
+        font-weight: 500;
+        transition: $transition-nav;
+        &:hover {
+          color: $color-nav;
+        }
+        &:hover::before {
+          content: "";
+          position: absolute;
+          transition: $transition-nav;
+          width: 100%;
+          bottom: -7px;
+          border: 1px solid $color-nav;
+        }
+      }
+    }
+  }
+
+  // navbar mobile
+  .menu-hamburger {
+    position: relative;
+    height: 30px;
+    width: 27px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 27px;
+      height: 2px;
+      background-color: $color-nav;
+      transform: translateY(-10px);
+      box-shadow: 0 10px 0 rgba($color: $color-nav, $alpha: 100);
+      transition: $transition-nav;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 27px;
+      height: 2px;
+      background-color: $color-nav;
+      transform: translateY(10px);
+      transition: $transition-nav;
+    }
+  }
+}
+
+// container
+.container {
+  max-width: 85%;
+  margin: 55px auto 0 auto;
+}
+
+// ? ===== responsive style =====
+@media only screen and (max-width: $mini-mobile) {
+  // Blmn ada style
+}
+// mobile version
+@media only screen and (max-width: $mobile) {
+  nav {
+    align-items: flex-start;
+    position: relative;
+    transition: $transition-nav;
+
+    &.mobile {
+      height: 275px;
+
+      h1::before {
+        content: "";
+        width: 100vw;
+        height: 2px;
+        background-color: $color-nav;
+        position: absolute;
+        right: 0;
+        top: 55px;
+        border-radius: 5px;
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        justify-content: space-evenly;
+        height: 100%;
+        left: 50px;
+        top: 25px;
+        bottom: 0;
+        li {
+          a {
+            font-weight: bold;
+            &:hover::before {
+              content: "";
+              border: none;
+            }
+          }
+        }
+      }
+    }
+
+    h1 {
+      margin-top: 10px;
+      font-size: 2rem;
+    }
+
+    ul {
+      display: none;
+    }
+
+    .menu-hamburger {
+      margin-top: 10px;
+      display: flex;
+
+      &.close::before {
+        box-shadow: 0 0 0;
+        transform: rotate(135deg) translateY(0);
+      }
+      &.close::after {
+        transform: rotate(-135deg) translateY(0);
+      }
+    }
+  }
+}
+
+// laptop version
+@media only screen and(min-width: $laptop) {
+  // nav {
+  //   align-items: center;
+  // }
+}
+// tablet version
+@media only screen and (max-width: $tablet) {
+  nav {
+    ul {
+      width: 60%;
+    }
+  }
 }
