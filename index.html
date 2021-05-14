@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
   <head>
     <!-- Meta tag -->
     <meta charset="UTF-8" />
@@ -7,162 +7,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Belajar Membuat Portofolio Website " />
     <meta name="keywords" content="Belajar Membuat Website Portofolio" />
-    <!--  css / scss  -->
-    <link rel="stylesheet" href="scss/main.css" />
-    
-    <!-- favicons -->
     <title>Portofolio Web</title>
+    <!-- Font google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: "Crimson Text", serif;
+        background-color: #ffffff;
+        background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .container img {
+        width: calc(10% + 15%);
+      }
+
+      .container h1 {
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+        color: seashell;
+      }
+
+      @media screen and (max-width: 600px) {
+        .container img {
+          width: calc(10% + 25%);
+        }
+
+        .container h1 {
+          font-size: 1.7rem;
+        }
+      }
+    </style>
   </head>
   <body>
+    <div class="container">
+      <img src="img/img-warning.png" alt="Website Sedag Dalam Perbaikan" />
 
-  <!-- container -->
-  <div class="container">
-    <!--  Navbar -->
-    <nav>
-      <h1 class="logo"><strong>Welcome</strong></h1>
-
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#artikel">Artikel</a></li>
-        <li><a href="#about">About</a></li>
-      </ul>
-
-      <div class="menu-hamburger"></div>
-    </nav>
-
-    <header>
-      <img src="img/faidah/TauhidMenyucikanKalbu.jpg" alt="Tauhid Menyucikan Kalbu" title="@unplash" />
-      <span>Azhar Mamonto</span>
-      <small>Students in <em><a href="http://smkn2kotamobagu.sch.id/">SMK N 2 Kotamobagu</a></em></small>
-    </header>
-    
-    <!-- artikel -->
-
-    <!--  about -->
-    <section id="about" class="about">
-      <h2>About Me</h2>
-      <div class="my-row">
-        <div class="my-col"> 
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, quos suscipit quasi reprehenderit qui et voluptatum magni sit voluptatem pariatur sapiente. Velit neque soluta rerum nihil eligendi expedita. Beatae accusamus sint odio voluptatibus dolore ad hic! Rem, explicabo incidunt? Fuga, tenetur.
-          </p>
-        </div>
-        <div class="my-col">
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, reprehenderit libero totam, a dolores pariatur tempora enim est laudantium ut at iusto soluta autem voluptas beatae accusamus sint odio voluptatibus dolore ad hic! Rem, explicabo incidunt? Fuga, tenetur.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!--  Gambar Faidah -->
-    <section id="gambar">
-      <h2>Gambar & Poster</h2>
-      <div class="container-image">
-        <div class="card-image">
-          <img src="img/faidah/bahaya_megerjakan_shalat_asal-aslan.jpg" alt="Bahaya Megerjakan Shalat Asal-asalan" />
-          <h2>Bahaya Megerjakan Shalat Asal-asalan</h2>
-          <p><em>Rasulullah shallahu'alaihi wasallam bersabda,</em></p>
-          <p><strong>"Sungguh, ada orang yang benar-benar shalat selama 60 tahun, tetapi shalatnya tidak ada yang diterima walaupun sekali saja. Hal ini karena Dia menyempurnakan rukuk, tetapi tidak menyempurkan sujud. Atau dia mnyempurnakan sujud, tetapi tidak meyempurnakan rukuk."</strong></p>
-          <p><em>Silsilah ash-Shahihah, no.2535</em> | <a href="http://t.me//Salafysidempuan/4244">http://t.me//Salafysidempuan/4244</a></p>
-
-          <div class="layer">
-            <h3><a href="https://t.me/SalafyKotamobagu">salafykotamobagu</a></h3>
-            <a href="img/faidah/bahaya_megerjakan_shalat_asal-aslan.jpg" download="bahaya_megerjakan_shalat_asal-asalan.jpg">
-              <img src="icons/download_icons.png" alt="Icons Download" title="Download Image" />
-            </a>
-            <a href="http://t.me//Salafysidempuan/4244">http://t.me//Salafysidempuan/4244</a>
-          </div>
-        </div>
-
-        <div class="card-image">
-          <img src="img/faidah/bahtera_keimanan.jpg" alt="Bahtera Keimanan" />
-          <h2>Bahtera Keimanan</h2>
-          <p>Yahya bin Abiy Katsiir menyampaikan bahwa <em>Lukman Hakim telah berkata,</em></p>
-          <p><strong>"Wahai putraku, dunia ini bagaikan samudra yang telah menenggelamkan banyak menusia. Bila engkau mampu, buatlah bahtera dari keimanan kepada Allah, isilah bahteramu dengan amal shalih dan jadikan layarnya adalah tawakal kepada Allah, niscaya engkau akan selamat."</strong></p>
-          <p><em>At-Tawakkul 'Alalloh Ibnu Abid Dunya hlm. 49</em> | Majmuah Petuah <a href="http://t.me//salafybaturaja/9057">http://t.me//salafybaturaja/9057</a></p>
-
-          <div class="layer">
-            <h3><a href="https://t.me/SalafyKotamobagu">salafykotamobagu</a></h3>
-            <a href="img/faidah/bahtera_keimanan.jpg" download="bahtera_keimanan.jpg">
-              <img src="icons/download_icons.png" alt="Icons Download" title="Download Image" />
-            </a>
-            <a href="http://t.me//salafybaturaja/9057">http://t.me//salafybaturaja/9057</a></p>
-          </div>
-        </div>
-
-        <div class="card-image">
-          <img src="img/faidah/ikatlah_kemarahanmu_dengan_rantai_kesantunan.jpg" alt="Ikatlah Kemarahanmu Dengan Rantai Kesantunan" />
-          <h2>Ikatlah Kemarahanmu Dengan Rantai Kesantunan</h2>
-          <p><em>Ibnul Qayyim Rahimahullah berkata,</em></p>
-          <p><strong>"Ikatlah marahmu dengan rantai kesantunan. Karena sesungguhnya (marah) itu adalah anjing, jika dia dilepas, dia akan merusak."</strong></p>
-          <p><strong>Al-Fawaid, 49</strong> | <a href="http://t.me//faedahsalafy/298">http://t.me//faedahsalafy/298"</a></p>
-
-          <div class="layer">
-            <h3><a href="https://t.me/SalafyKotamobagu">salafykotamobagu</a></h3>
-            <a href="img/faidah/ikatlah_kemarahanmu_dengan_rantai_kesantunan.jpg" download="ikatlah_kemarahanmu_dengan_rantai_kesantunan.jpg">
-              <img src="icons/download_icons.png" alt="Icons Download" title="Download Image" />
-            </a>
-            <a href="http://t.me//faedahsalafy/298">http://t.me//faedahsalafy/298</a></p>
-          </div>
-        </div>
-
-        <div class="card-image">
-          <img src="img/faidah/kunci_keselamatan.jpg" alt="Kunci Keselamatan" />
-          <h2>Kunci Keselamatan</h2>
-          <p><em>Asy-Syaikh shalih al-Fauzan Hafidzahullah berkata,</em></p>
-          <p><strong>"Siapa yang megiginkan keselamatan, maka hendaklah dia berpegang teguh dengan al-Qur'an da as-Sunnah tanpa ekstrim. Namun juga tidak meremehkan."<strong></p>
-          <p><strong>At-Ta'liq ighatsatil Lahafan, 28 Dzulhijjah 1435</strong> | <a href="http://t.me//forumsalafy/14661">http://t.me//forumsalafy/14661"</a></p>
-          <div class="layer">
-            <h3><a href="https://t.me/SalafyKotamobagu">salafykotamobagu</a></h3>
-            <a href="img/faidah/kunci_keselamatan.jpg" download="kunci_keselamatan.jpg">
-              <img src="icons/download_icons.png" alt="Icons Download" title="Download Image" />
-            </a>
-            <a href="http://t.me//forumsalafy/14661">http://t.me//forumsalafy/14661</a></p>
-          </div>
-        </div>
-
-        <div class="card-image">
-          <img src="img/faidah/ketenagan_hidup.jpg" alt="Ketengaan Hidup" />
-          <h2>Ketenagan Hidup Hanya untuk Orang-Orang yang <em>Taat Kepada Allah Ta'ala</em></h2>
-          <p>Syaikh Muhammad bis Shalih al-Utsaimin Rahimahullah berkata,</p>
-          <p><strong>"Orang-orang yang sering melakukan ketaatan merasakan ketenagan dan ketentraman walaupun salah seorang dari mereka fakir. Sesungguhnya Allah memberikan pikiran yang luas dan perasaan yang cukup.</strong>"</p>
-          <p><strong>Tafsir Surah al-Maidah, jilid 2 hlm. 90</strong> | <a href="http://t.me//ForumSalafy">http://t.me//ForumSalafy</a></p>
-
-          <div class="layer">
-            <h3><a href="https://t.me/SalafyKotamobagu">salafykotamobagu</a></h3>
-            <a href="img/faidah/ketenagan_hidup.jpg" download="ketenagan_hidup.jpg">
-              <img src="icons/download_icons.png" alt="Icons Download" title="Download Image" />
-            </a>
-            <a href="http://t.me//http://t.me//ForumSalafy">http://t.me//ForumSalafy</a></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="nav-gambar">
-        <ul>
-          <li>1</li>
-          <li>2</li>
-          <li onclick="alert('Maaf menu ini belum tersedia')">3</li>
-        </ul>
-      </div>
-    </section>
-
-    <footer>
-      <h3>  &copy; 1442 / 2021 </h3>
-      <div class="icons">
-        <a href="https://t.me/azharMmto" title="Telegram Chat">
-          <img src="icons/massenger.svg" alt="Telegram" />
-        </a>
-
-        <a href="http://wa.me/+6282196958481" title="WhatsApp Chat">
-          <img src="icons/wa_logo.svg" alt="WA" />
-        </a>
-      </div>
-    </footer>
-  </div>
-
-    <!-- MY JS -->
-    <script src="js/script.js"></script>
+      <h1>Website ini sedang dalam perbaikan</h1>
+    </div>
   </body>
 </html>

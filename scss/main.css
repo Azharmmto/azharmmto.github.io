@@ -54,6 +54,10 @@ body {
   line-height: 1;
 }
 
+img {
+  width: 50%;
+}
+
 article,
 aside,
 footer,
@@ -71,6 +75,10 @@ textarea {
   overflow: auto;
   vertical-align: top;
   resize: vertical;
+}
+
+a {
+  text-decoration: none;
 }
 
 html {

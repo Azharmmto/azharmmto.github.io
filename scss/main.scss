@@ -1,11 +1,19 @@
 // import css reset
 @import "_reset-normalize";
 
-// font
+// font google
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap");
 
 // variabel
 $main-font: "Inter", sans-serif;
+$main-color: #6abe3f;
+
+// Responsive layout width
+$mini-mobile: 280px;
+$mobile: 576px;
+$tablet: 768px;
+$laptop: 992px;
+$desktop: 1200px;
 
 body {
   font-family: $main-font;
