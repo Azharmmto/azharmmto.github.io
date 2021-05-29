@@ -19,6 +19,7 @@ $bg-nav: #ffffff;
 $color-nav: #2d17aa;
 $cek-border: 1px dashed red;
 $transition-nav: 0.3s all;
+$border-img: 1px solid #eeeeee;
 
 // * Responsive layout size variabel
 $mini-mobile: 285px;
@@ -226,68 +227,133 @@ header:nth-child(2) {
    margin: 1rem auto;
 
    // * article *
-   header {
-      margin-top: 1.3rem;
-      color: $main-color;
-      h2 {
-         @include txt-grdnt-jdl;
-      }
-      hr {
-         margin-right: auto;
-         width: 50%;
-      }
-   }
-
-   .container-article {
-      margin-top: 2rem;
-      display: flex;
-      justify-content: space-evenly;
-
-      .card-article {
-         max-width: 400px;
+   .article {
+      header {
+         margin-top: 1.3rem;
          position: relative;
 
-         a:nth-child(1) {
-            img {
-               width: 100%;
-               transition: $transition-nav;
+         h2 {
+            @include txt-grdnt-jdl;
+
+            &::before {
+               content: "";
+               width: 8%;
+               height: 2px;
+               background-color: $main-color;
                position: absolute;
-               &:hover {
-                  border: 1px solid $main-color;
-                  margin-bottom: -2px;
-               }
+               bottom: 0;
+               right: 46%;
             }
          }
-         article {
-            width: 95%;
-            border: 1px solid #eee;
-            margin: auto;
-            margin-top: 210px;
+         hr {
+            margin-right: auto;
+            max-width: 50%;
+         }
+      }
+
+      main {
+         margin-top: 2rem;
+         display: flex;
+         justify-content: space-evenly;
+
+         .card-article {
+            max-width: 400px;
             position: relative;
-            z-index: 5;
-            background-color: $bg-nav;
-            padding: 10px;
-            a {
-               h3 {
-                  font-weight: $fnt-w-jdl;
-                  color: $color-nav;
-                  font-size: 1.1rem;
-                  text-transform: capitalize;
+
+            a:nth-child(1) {
+               img {
+                  width: 100%;
                   transition: $transition-nav;
-                  margin: 10px 0;
+                  position: absolute;
+                  border-radius: 7px;
 
                   &:hover {
-                     color: #000;
+                     border: 1px solid $main-color;
+                     margin-bottom: -2px;
                   }
                }
             }
-            p {
-               line-height: 23px;
+            article {
+               width: 95%;
+               border: 1px solid #eee;
+               margin: auto;
+               margin-top: 210px;
+               position: relative;
+               z-index: 5;
+               background-color: $bg-nav;
+               padding: 10px;
+               a {
+                  h3 {
+                     font-weight: $fnt-w-jdl;
+                     color: $color-nav;
+                     font-size: 1.1rem;
+                     text-transform: capitalize;
+                     transition: $transition-nav;
+                     margin: 10px 0;
+
+                     &:hover {
+                        color: #000;
+                     }
+                  }
+               }
+               p {
+                  line-height: 23px;
+               }
+            }
+         }
+      }
+   }
+
+   // * gambar fawaid *
+   .gambar {
+      header {
+         margin-top: 2rem;
+         position: relative;
+
+         h2 {
+            @include txt-grdnt-jdl;
+
+            &::before {
+               content: "";
+               width: 13%;
+               height: 2px;
+               background-color: $main-color;
+               position: absolute;
+               bottom: 0;
+            }
+         }
+
+         hr {
+            max-width: 50%;
+         }
+      }
+
+      main {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+
+         img {
+            max-width: 25%;
+            margin-right: 1.3rem;
+            margin-top: 1rem;
+            border-radius: 10px;
+
+            &[alt^="Ikatlah"] {
+               border: $border-img;
+            }
+            &[alt^="Kunci"] {
+               border: $border-img;
+            }
+            &[alt^="Ketengaan"] {
+               border: $border-img;
             }
          }
       }
    }
 }
+
+// * footer *
 
 /*  
   * ====== responsive style ======= *
