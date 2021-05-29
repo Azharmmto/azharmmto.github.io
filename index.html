@@ -9,7 +9,7 @@
   <meta name="description" content="Belajar Membuat Portofolio Website " />
   <meta name="keywords" content="Belajar Membuat Website Portofolio" />
   <!--  css / scss  -->
-  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="./scss/css/main.css" />
 
   <!-- favicons -->
   <link rel="shortcut icon" href="favicon/favicon.png" type="image/x-icon" />
@@ -18,35 +18,98 @@
 
 <body>
 
-  <!--  Navbar -->
+  <!-- Navbar -->
   <nav>
-    <h1 class="logo">
-      <a href="#">Welcome</a>
-    </h1>
-
+    <div class="logo">
+      <a href="#">
+        <h2>Ahlan
+          <br /> <small>wa</small>
+          <span>Sahlan</span>
+        </h2>
+      </a>
+    </div>
     <ul>
       <li><a href="#">Home</a></li>
-      <li><a href="#artikel">Artikel</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="#article">Artikel</a></li>
+      <li><a href="#about">Poster</a></li>
     </ul>
-
     <div class="menu-hamburger"></div>
   </nav>
 
+  <!-- header -->
+  <header>
+    <main>
+      <img src="img/faidah/TauhidMenyucikanKalbu.jpg" alt="Tauhid Menyucikan Kalbu" title="@unplash" />
+      <strong>
+        <h4>Welcome to myWebsite :</h4>
+        <h3>Azhar Mamonto</h3>
+        <p><em>"Balasan sesuai dengan amal perbuatan"</em></p>
+        <div class="medsos">
+          <a href="https://t.me/azharmmto">
+            <img src="icons/telegram_logo-svgrepo.svg" alt="Telegram Contact" title="Telegram Contact" />
+          </a>
+          <a href="https://wa.me/+6282196958481">
+            <img src="icons/whatsapp_logo-svgrepo.svg" alt="WhatsApp Contact" title="WhatsApp Contact" />
+          </a>
+          <a href="#">
+            <img src="icons/instagram_logo-svgrepo.svg" alt="Instagram Logo" title="Instagram" />
+          </a>
+        </div>
+      </strong>
+    </main>
+  </header>
+
   <!-- container -->
   <div class="container">
-    <header>
-      <img src="img/faidah/TauhidMenyucikanKalbu.jpg" alt="Tauhid Menyucikan Kalbu" title="@unplash" />
-      <span>Azhar Mamonto</span>
-      <small>Students in <em><a href="http://smkn2kotamobagu.sch.id/">SMK N 2 Kotamobagu</a></em></small>
-    </header>
 
     <!-- artikel -->
+    <section id="article">
+      <header>
+        <h2>Article</h2>
 
+        <hr />
+      </header>
+      <div class="container-article">
+        <div class="card-article">
+          <a href="#">
+            <img src="img/pemandangan/g1-unplash.jpg" alt="Gambar Pantai" title="@unplash" />
+          </a>
+          <article>
+            <a href="#">
+              <h3>Judul Artikel Lorem ipsum dolor</h3>
+            </a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla, itaque sapiente cum iste a
+              voluptas ab impedit! Dolorum suscipit nisi voluptate ipsa beatae velit omnis expedita nobis ipsam
+              molestias. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati mollitia aspernatur sunt?
+              Eveniet assumenda nam officia nulla, corporis amet, in veritatis consequuntur dolore inventore voluptates
+              magni facilis at enim. Delectus.</p>
+          </article>
+        </div>
+        <div class="card-article">
+          <a href="#">
+            <img src="img/pemandangan/g2-unsplash.jpg" alt="Gambar Pantai" title="@unplash" />
+          </a>
+          <article>
+            <a href="#">
+              <h3>Judul Artikel Lorem ipsum dolor</h3>
+            </a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla, itaque sapiente cum iste a
+              voluptas ab impedit! Dolorum suscipit nisi voluptate ipsa beatae velit omnis expedita nobis ipsam
+              molestias. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus doloremque asperiores
+              tenetur minima ea debitis aliquid nihil quasi! Impedit iure error sequi nemo fugiat tenetur? Aut accusamus
+              maxime eius voluptas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
     <!--  Gambar Faidah -->
     <section id="gambar">
-      <h2>Gambar & Poster</h2>
+      <header>
+        <h2>Gambar Fawaid</h2>
+
+        <hr />
+      </header>
       <div class="container-image">
         <div class="card-image">
           <img src="img/faidah/bahaya_megerjakan_shalat_asal-aslan.jpg" alt="Bahaya Megerjakan Shalat Asal-asalan" />
@@ -155,19 +218,10 @@
 
     <footer>
       <h3> &copy; 1442 / 2021 </h3>
-      <div class="icons">
-        <a href="https://t.me/azharMmto" title="Telegram Chat">
-          <img src="icons/massenger.svg" alt="Telegram" />
-        </a>
-
-        <a href="http://wa.me/+6282196958481" title="WhatsApp Chat">
-          <img src="icons/wa_logo.svg" alt="WA" />
-        </a>
-      </div>
     </footer>
   </div>
 
-  <!-- MY JS -->
+  <!-- js -->
   <script src="js/script.js"></script>
 </body>
 
