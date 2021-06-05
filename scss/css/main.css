@@ -85,6 +85,30 @@ html {
   -ms-text-size-adjust: 100%;
 }
 
+html::-webkit-scrollbar {
+  background-color: #ffffff;
+}
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #bebebe;
+  transition: 0.3s all;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #6b51ff;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #eee;
+  border-radius: 5px;
+  transition: 0.3s all;
+}
+
+html::-webkit-scrollbar-track:hover {
+  background-color: #c5c3c3;
+}
+
 body {
   font-family: "Inter", sans-serif;
 }
@@ -195,40 +219,35 @@ nav .menu-hamburger::after {
 }
 
 header:nth-child(2) {
+  background-color: #2d17aa;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 2 1'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%232d17aa'/%3E%3Cstop offset='1' stop-color='%237c25ff'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23bea4ff' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23bea4ff' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='2' y2='2'%3E%3Cstop offset='0' stop-color='%23bea4ff' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23bea4ff' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='2' height='1'/%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23b)' points='0 1 0 0 2 0'/%3E%3Cpolygon fill='url(%23c)' points='2 1 2 0 0 0'/%3E%3C/g%3E%3C/svg%3E") center no-repeat fixed;
+  background-size: cover;
   display: flex;
   align-items: center;
   height: 60vh;
   width: 100vw;
-  background-color: #2d17aa;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 2 1'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%232d17aa'/%3E%3Cstop offset='1' stop-color='%237c25ff'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23bea4ff' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23bea4ff' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='2' y2='2'%3E%3Cstop offset='0' stop-color='%23bea4ff' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23bea4ff' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='2' height='1'/%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23b)' points='0 1 0 0 2 0'/%3E%3Cpolygon fill='url(%23c)' points='2 1 2 0 0 0'/%3E%3C/g%3E%3C/svg%3E");
-  background-attachment: fixed;
-  background-size: cover;
 }
 
-header:nth-child(2) main {
-  display: flex;
-}
-
-header:nth-child(2) main img {
+header:nth-child(2) img {
   width: 15%;
   margin-left: 100px;
   border-radius: 7px;
   box-shadow: 0 3.4px 2.7px rgba(0, 0, 0, 0.014), 0 8.7px 6.9px rgba(0, 0, 0, 0.025), 0 17.7px 14.2px rgba(0, 0, 0, 0.036), 0 36.5px 29.2px rgba(0, 0, 0, 0.048), 0 100px 80px rgba(0, 0, 0, 0.06);
 }
 
-header:nth-child(2) main strong {
+header:nth-child(2) main {
   margin-left: 25px;
 }
 
-header:nth-child(2) main strong h4 {
+header:nth-child(2) main h4 {
   font-weight: 400;
   font-size: 1rem;
   margin-top: 10px;
   color: #b4b4b4;
 }
 
-header:nth-child(2) main strong h3 {
-  font-weight: 700;
+header:nth-child(2) main h3 {
+  font-weight: 400;
   font-size: 2rem;
   margin-top: 1rem;
   margin-bottom: 10px;
@@ -236,27 +255,27 @@ header:nth-child(2) main strong h3 {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
-header:nth-child(2) main strong p em {
+header:nth-child(2) main p em {
   font-style: italic;
   color: #b4b4b4;
 }
 
-header:nth-child(2) main strong .medsos {
+header:nth-child(2) main .medsos {
   margin-top: 1rem;
 }
 
-header:nth-child(2) main strong .medsos a img {
+header:nth-child(2) main .medsos a img {
   max-width: 30px;
   margin-left: auto;
   transition: 0.3s all;
   box-shadow: 0 3.4px 2.7px rgba(0, 0, 0, 0.014), 0 8.7px 6.9px rgba(0, 0, 0, 0.025), 0 17.7px 14.2px rgba(0, 0, 0, 0.036), 0 36.5px 29.2px rgba(0, 0, 0, 0.048), 0 100px 80px rgba(0, 0, 0, 0.06);
 }
 
-header:nth-child(2) main strong .medsos a img:hover {
+header:nth-child(2) main .medsos a img:hover {
   transform: translateX(3px);
 }
 
-header:nth-child(2) main strong .medsos a:nth-child(2) img {
+header:nth-child(2) main .medsos a:nth-child(2) img {
   margin: 0 1.5rem;
 }
 
@@ -329,9 +348,34 @@ header:nth-child(2) main strong .medsos a:nth-child(2) img {
   margin: auto;
   margin-top: 210px;
   position: relative;
-  z-index: 5;
+  z-index: 3;
   background-color: #ffffff;
   padding: 10px;
+}
+
+.container .article main .card-article article .dibuat em {
+  display: block;
+  font-style: italic;
+  font-size: 12px;
+}
+
+.container .article main .card-article article .dibuat em strong {
+  font-weight: 600;
+}
+
+.container .article main .card-article article .dibuat em.date {
+  margin-top: 10px;
+}
+
+.container .article main .card-article article .dibuat em.date::before {
+  content: "";
+  display: block;
+  background: url(./../../icons/calender-svgrepo.svg) no-repeat;
+  background-size: 10px;
+  width: 10px;
+  height: 10px;
+  margin-right: 3px;
+  float: left;
 }
 
 .container .article main .card-article article a h3 {
@@ -349,6 +393,10 @@ header:nth-child(2) main strong .medsos a:nth-child(2) img {
 
 .container .article main .card-article article p {
   line-height: 23px;
+}
+
+.container .article main .card-article article p a:hover {
+  text-decoration: underline;
 }
 
 .container .gambar header {
@@ -406,27 +454,93 @@ header:nth-child(2) main strong .medsos a:nth-child(2) img {
   border: 1px solid #eeeeee;
 }
 
-/*  
-  * ====== responsive style ======= *
-*/
+footer {
+  margin-top: 3rem;
+  margin-bottom: 0;
+  background: url(./../../img/pemandangan/gfoot-unsplash.jpg) no-repeat center fixed;
+  background-size: cover;
+  background-clip: border-box;
+  background-blend-mode: overlay;
+  background-color: #4f31f7;
+  background-position: center;
+  padding: 10px;
+  position: relative;
+}
+
+footer h2 {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+footer article {
+  max-width: 50%;
+  margin: auto;
+}
+
+footer article em {
+  font-style: italic;
+  color: #ffffff;
+  margin-bottom: 10px;
+  display: block;
+}
+
+footer article em:nth-last-child(2) {
+  font-weight: 600;
+}
+
+footer article em:nth-last-child(1) {
+  font-size: 12px;
+  margin-bottom: 2.3rem;
+}
+
+footer article em:nth-last-child(1) a {
+  color: #eee;
+}
+
+footer article em:nth-last-child(1) a:hover {
+  text-decoration: underline;
+}
+
+footer article p {
+  width: 100%;
+  color: #eee;
+  line-height: 25px;
+}
+
+footer article p:nth-child(2) {
+  margin-top: 10px;
+}
+
+footer article p:nth-child(3) {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+footer h3 {
+  background-color: #252525;
+  padding: 10px;
+  color: #eee;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
 @media only screen and (max-width: 576px) {
   nav {
     align-items: flex-start;
     position: relative;
     transition: 0.3s all;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 5;
+    height: 55px;
   }
   nav.mobile {
     height: 275px;
-  }
-  nav.mobile h1::before {
-    content: "";
-    width: 100vw;
-    height: 2px;
-    background-color: #2d17aa;
-    position: absolute;
-    right: 0;
-    top: 55px;
-    border-radius: 5px;
   }
   nav.mobile ul {
     display: flex;
@@ -439,21 +553,20 @@ header:nth-child(2) main strong .medsos a:nth-child(2) img {
     bottom: 0;
   }
   nav.mobile ul li a {
-    font-weight: bold;
+    font-weight: 500;
   }
   nav.mobile ul li a:hover::before {
     content: "";
     border: none;
   }
-  nav h1 {
-    margin-top: 10px;
-    font-size: 2rem;
+  nav .logo {
+    margin-top: 7px;
   }
-  nav ul {
-    display: none;
+  nav .logo a h2 {
+    font-size: 1.2rem;
   }
   nav .menu-hamburger {
-    margin-top: 10px;
+    margin-top: 13px;
     display: flex;
   }
   nav .menu-hamburger.close::before {
@@ -462,6 +575,116 @@ header:nth-child(2) main strong .medsos a:nth-child(2) img {
   }
   nav .menu-hamburger.close::after {
     transform: rotate(-135deg) translateY(0);
+  }
+  nav ul {
+    display: none;
+  }
+  header {
+    min-height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 55px;
+  }
+  header img[alt^="Tauhid Menyucikan Kalbu"] {
+    margin-left: 0;
+    min-width: 30%;
+    border-radius: 50%;
+  }
+  header main h4 {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  header main h3 {
+    font-size: 1.5rem !important;
+    text-align: center;
+    margin: 0;
+  }
+  header main .medsos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  header main .medsos a:nth-child(1) img {
+    min-width: 30px;
+  }
+  header main .medsos a:nth-child(2) img {
+    min-width: 30px;
+  }
+  header main .medsos a:nth-child(3) img {
+    min-width: 30px;
+  }
+  .container .article main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container .article main .card-article {
+    max-width: 300px;
+  }
+  .container .article main .card-article:nth-child(2) {
+    margin-top: 1rem;
+  }
+  .container .article main .card-article article {
+    margin-top: 150px;
+    max-height: 250px;
+    overflow-y: scroll;
+  }
+  .container .article main .card-article article::-webkit-scrollbar {
+    background-color: #ffffff;
+    width: 10px;
+  }
+  .container .article main .card-article article::-webkit-scrollbar-thumb {
+    background-color: #bebebe;
+    border-radius: 7px;
+  }
+  .container .article main .card-article article::-webkit-scrollbar-track {
+    min-width: 15px;
+  }
+  .container .gambar main {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .container .gambar main img {
+    max-width: 75%;
+  }
+  footer h2 {
+    text-align: center;
+  }
+  footer article {
+    max-width: 100%;
+    margin-left: 10px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  footer article em {
+    font-style: italic;
+    color: #ffffff;
+    margin-bottom: 10px;
+    display: block;
+  }
+  footer article em:nth-last-child(2) {
+    font-weight: 600;
+  }
+  footer article em:nth-last-child(1) {
+    font-size: 12px;
+  }
+  footer article em:nth-last-child(1) a {
+    color: #eee;
+  }
+  footer article em:nth-last-child(1) a:hover {
+    text-decoration: underline;
+  }
+  footer article p {
+    width: 100%;
+    color: #eee;
+  }
+  footer article p:nth-child(2) {
+    margin-top: 10px;
+  }
+  footer article p:nth-child(3) {
+    margin-top: 7px;
+    margin-bottom: 7px;
   }
 }
 
