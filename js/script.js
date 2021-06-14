@@ -14,3 +14,30 @@ menuHamburger.onclick = () => {
    menuHamburger.classList.toggle("close");
    nav.classList.toggle("mobile");
 };
+
+// lighbox gambar header
+const gambar = document.querySelector("header img"),
+   // icons close
+   closeIcons = document.querySelector(".icons .close"),
+   closeArrow = document.querySelector('.lgbox .icons img[alt^="Icons Back Arrow"]'),
+   // bg lightbox
+   lgbox = document.querySelector(".lgbox"),
+   // gambar src nya sesuai gambar
+   imgContent = document.querySelector(".lgbox .lgbox-content"),
+   // caption
+   captionText = document.querySelector(".lgbox .caption-lgbox");
+
+gambar.onclick = function () {
+   lgbox.style.display = "block";
+   imgContent.src = this.src;
+   captionText.innerHTML = this.alt;
+};
+
+// close
+closeIcons.onclick = function () {
+   lgbox.style.display = "none";
+};
+
+closeArrow.onclick = function () {
+   lgbox.style.display = "none";
+};

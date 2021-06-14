@@ -85,6 +85,10 @@ html {
   -ms-text-size-adjust: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html::-webkit-scrollbar {
   background-color: #ffffff;
 }
@@ -233,6 +237,12 @@ header:nth-child(2) img {
   margin-left: 100px;
   border-radius: 7px;
   box-shadow: 0 3.4px 2.7px rgba(0, 0, 0, 0.014), 0 8.7px 6.9px rgba(0, 0, 0, 0.025), 0 17.7px 14.2px rgba(0, 0, 0, 0.036), 0 36.5px 29.2px rgba(0, 0, 0, 0.048), 0 100px 80px rgba(0, 0, 0, 0.06);
+  cursor: zoom-in;
+  transition: 0.3s all;
+}
+
+header:nth-child(2) img:hover {
+  opacity: 0.7;
 }
 
 header:nth-child(2) main {
@@ -268,7 +278,6 @@ header:nth-child(2) main .medsos a img {
   max-width: 30px;
   margin-left: auto;
   transition: 0.3s all;
-  box-shadow: 0 3.4px 2.7px rgba(0, 0, 0, 0.014), 0 8.7px 6.9px rgba(0, 0, 0, 0.025), 0 17.7px 14.2px rgba(0, 0, 0, 0.036), 0 36.5px 29.2px rgba(0, 0, 0, 0.048), 0 100px 80px rgba(0, 0, 0, 0.06);
 }
 
 header:nth-child(2) main .medsos a img:hover {
@@ -279,12 +288,100 @@ header:nth-child(2) main .medsos a:nth-child(2) img {
   margin: 0 1.5rem;
 }
 
+header:nth-child(2) .lgbox {
+  display: none;
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+header:nth-child(2) .lgbox .icons {
+  top: 16px;
+  position: absolute;
+  right: 10%;
+  height: 90vh;
+  min-width: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header:nth-child(2) .lgbox .icons .close {
+  font-size: 45px;
+  color: #fff;
+  text-align: right;
+  cursor: pointer;
+}
+
+header:nth-child(2) .lgbox .icons .close:hover {
+  color: #ff0000;
+}
+
+header:nth-child(2) .lgbox .icons img[alt^="Download"] {
+  margin: auto;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+}
+
+header:nth-child(2) .lgbox .icons img[alt^="Icons Back Arrow"] {
+  display: none;
+}
+
+header:nth-child(2) .lgbox .lgbox-content {
+  margin: 3% auto 0 auto;
+  display: block;
+  width: 50%;
+  max-width: 500px;
+}
+
+header:nth-child(2) .lgbox .caption-lgbox {
+  margin: auto;
+  color: #dad6d6;
+  font-size: 1.3rem;
+  text-align: center;
+  width: 50%;
+  max-width: 500px;
+  padding: 10px;
+}
+
+header:nth-child(2) .lgbox .lgbox-content,
+header:nth-child(2) .lgbox .caption-lgbox {
+  animation-name: zoomG;
+  animation-duration: 0.5s;
+  transition: 0.5s;
+}
+
+@keyframes zommG {
+  0% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
 /*
   * container *
 */
 .container {
   max-width: 85%;
   margin: 1rem auto;
+}
+
+.container .article {
+  padding-top: 7px;
 }
 
 .container .article header {
@@ -399,6 +496,10 @@ header:nth-child(2) main .medsos a:nth-child(2) img {
   text-decoration: underline;
 }
 
+.container .gambar {
+  padding-top: 7px;
+}
+
 .container .gambar header {
   margin-top: 2rem;
   position: relative;
@@ -429,28 +530,34 @@ header:nth-child(2) main .medsos a:nth-child(2) img {
   max-width: 50%;
 }
 
-.container .gambar main {
+.container .gambar .row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.container .gambar main img {
+.container .gambar .row img {
   max-width: 25%;
   margin-right: 1.3rem;
   margin-top: 1rem;
   border-radius: 10px;
+  transition: 0.3s all;
+  cursor: zoom-in;
 }
 
-.container .gambar main img[alt^="Ikatlah"] {
+.container .gambar .row img:hover {
+  opacity: 0.7;
+}
+
+.container .gambar .row img[alt^="Ikatlah"] {
   border: 1px solid #eeeeee;
 }
 
-.container .gambar main img[alt^="Kunci"] {
+.container .gambar .row img[alt^="Kunci"] {
   border: 1px solid #eeeeee;
 }
 
-.container .gambar main img[alt^="Ketengaan"] {
+.container .gambar .row img[alt^="Ketengaan"] {
   border: 1px solid #eeeeee;
 }
 
@@ -571,10 +678,10 @@ footer h3 {
   }
   nav .menu-hamburger.close::before {
     box-shadow: 0 0 0;
-    transform: rotate(135deg) translateY(0);
+    transform: rotate(45deg) translateY(0);
   }
   nav .menu-hamburger.close::after {
-    transform: rotate(-135deg) translateY(0);
+    transform: rotate(-45deg) translateY(0);
   }
   nav ul {
     display: none;
@@ -588,8 +695,41 @@ footer h3 {
   }
   header img[alt^="Tauhid Menyucikan Kalbu"] {
     margin-left: 0;
-    min-width: 30%;
+    min-width: 45%;
     border-radius: 50%;
+  }
+  header .lgbox .icons {
+    max-height: 100vh !important;
+    min-width: 10% !important;
+    bottom: 0 !important;
+    flex-direction: row !important;
+    position: relative;
+    z-index: 0;
+  }
+  header .lgbox .icons .close {
+    display: none;
+  }
+  header .lgbox .icons img[alt^="Download"] {
+    top: 0;
+    margin: 0 !important;
+    width: 25% !important;
+    right: 0;
+  }
+  header .lgbox .icons img[alt^="Icons Back Arrow"] {
+    display: block !important;
+    margin-top: 80vh;
+    margin-right: 0;
+  }
+  header .lgbox .icons img[alt^="Icons Back Arrow"]:hover {
+    cursor: pointer;
+  }
+  header .lgbox .lgbox-content {
+    margin: 25% auto 0 auto !important;
+    width: 75% !important;
+    max-width: 700px !important;
+  }
+  header .lgbox .caption-lgbox {
+    font-size: 1rem !important;
   }
   header main h4 {
     text-align: center;
@@ -613,6 +753,13 @@ footer h3 {
   }
   header main .medsos a:nth-child(3) img {
     min-width: 30px;
+  }
+  .container .article header h2::before {
+    width: 50%;
+    left: 77px !important;
+  }
+  .container .article header hr {
+    max-width: 80%;
   }
   .container .article main {
     flex-direction: column;
@@ -640,13 +787,20 @@ footer h3 {
   .container .article main .card-article article::-webkit-scrollbar-track {
     min-width: 15px;
   }
-  .container .gambar main {
+  .container .gambar header h2::before {
+    width: 60%;
+    left: 63px;
+  }
+  .container .gambar header hr {
+    max-width: 80%;
+  }
+  .container .gambar .row {
     flex-direction: column;
-    align-items: center;
     flex-wrap: nowrap;
   }
-  .container .gambar main img {
+  .container .gambar .row img {
     max-width: 75%;
+    margin: 10px auto;
   }
   footer h2 {
     text-align: center;
